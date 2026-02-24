@@ -22,7 +22,6 @@ jobs:
           echo "${{ secrets.SF_AUTH_URL }}" > auth.txt
           sfdx force:auth:sfdxurl:store -f auth.txt -a TargetOrg
 
-      - name: Deploy to Org 2
+      - name: Deploy to sgolla@cpq.com
         run: |
           sfdx force:source:deploy -p force-app -u TargetOrg
-          
